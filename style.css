@@ -1,0 +1,266 @@
+/* Basic Reset */
+* {
+    /* Reset margin and padding to 0 */
+    margin: 0;
+    padding: 0;
+    /* Use border-box box model to include padding and border in width and height */
+    box-sizing: border-box;
+}
+
+body {
+    /* Set font family to Arial, sans-serif */
+    font-family: Arial, sans-serif;
+    /* Set background color to light pink */
+    background-color: #ffe6f2;
+    /* Set text color to dark gray */
+    color: #333;
+    /* Set line height to 1.6 */
+    line-height: 1.5;
+    /* Add padding to the left to make room for navigation */
+    padding-left: 170px; /* Adjust based on nav width */
+    padding-right: 30px;
+}
+
+/* Navigation */
+nav {
+    /* Position navigation bar fixed to the left */
+    position: fixed;
+    left: 0;
+    top: 50%;
+    /* Center navigation bar vertically */
+    transform: translateY(-50%);
+    /* Set width to 200px */
+    width: 150px;
+    /* Set background color to pink */
+    background-color: rgb(255, 102, 153);
+    /* Add padding to navigation bar */
+    padding: 15px;
+    /* Set height to auto to fit content */
+    height: auto;
+    /* Add slight shadow to navigation bar */
+    box-shadow: 2px 0 5px #df3c7d8b;
+    /* Add rounded corners to navigation bar */
+    border-radius: 0 50px 50px 0;
+}
+
+nav ul {
+    /* Remove bullet points from navigation list */
+    list-style-type: square;
+    /* Remove default padding from list items */
+    padding: 0;
+    /* Add margin to navigation list */
+    margin: 0;
+}
+
+nav ul li {
+    /* Add margin to navigation list items */
+    margin: 15px 0;
+}
+
+nav ul li a {
+    /* Remove underline from navigation links */
+    text-decoration: none;
+    /* Set text color to white */
+    color: #fff;
+    /* Set font weight to bold */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    /* Change text color to pink on hover */
+    color: #ffff00;
+    /* Add text shadow on hover */
+    text-shadow: 2px 2px 5px rgba(232, 65, 132, 0.5);
+}
+
+
+/* Content Container */
+.content {
+    /* Add padding to content container */
+    padding: 0px;
+}
+
+/* Header Section */
+header {
+    /* Center header content */
+    text-align: center;
+    /* Add padding to header */
+    padding: 50px 20px;
+}
+
+header h1 {
+    /* Set font size to 2.5rem */
+    font-size: 2.5rem;
+    /* Set text color to pink */
+    color: #ff3385;
+}
+
+header h1:hover {
+    /* Change text color to pink on hover */
+    color: #ff0066;
+    /* Add text shadow on hover */
+    text-shadow: 2px 2px 8px rgba(255, 51, 133, 0.5);
+    /* Add transition effect to text color and shadow */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Add animation effect to header text color and shadow */
+    animation: color-shadow 2s infinite alternate;
+}
+
+header p {
+    /* Set font size to 1.2rem */
+    font-size: 1.2rem;
+    /* Add margin top to paragraph */
+    margin-top: 10px;
+}
+
+header img {
+    /* Set image width and height to 400px */
+    width: 400px;
+    height: 400px;
+    /* Add rounded corners to image */
+    border-radius: 50%;
+    /* Add margin top to image */
+    margin-top: 20px;
+    /* Add border to image */
+    border: 5px solid #ff99cc;
+    /* Add transition effect to image border and transform */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+}
+
+header img:hover {
+    /* Change border color to pink on hover */
+    border-color: #ff6699;
+    /* Scale image on hover */
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    /* Add margin to sections */
+    margin: 50px 0;
+}
+
+section h2 {
+  text-align: center;
+  color: #ff0066;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+section h2:hover {
+    color: #ff3385;
+    text-shadow: 2px 2px 8px rgba(255, 51, 133, 0.5);
+}
+
+
+section ul {
+    /* Remove bullet points from section lists */
+    list-style-type: none;
+    /* Remove padding from section lists */
+    padding-left: 0;
+}
+
+section ul li {
+    /* Set background color to white */
+    background-color: #fff;
+    /* Add padding to section list items */
+    padding: 10px;
+    /* Add margin to section list items*/
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section ul li:hover {
+    background-color: #ffe6f2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+#blog{
+    text-align: justify;
+}
+
+#about{
+    text-align: center;
+}
+
+#contact {
+    text-align: center;
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Jump animation */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply jump animation to nav links */
+nav ul li a.clicked {
+    animation: jump .5s ease;
+}
+
+/* Apply jump animation to sections */
+section.jump-section {
+    animation: jump 0.5s ease;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.5 ease;
+}
+
+/* Clicked State Effect */
+.nav-link.clicked {
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Jump up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+}
