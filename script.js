@@ -8,7 +8,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Change Navigation Bar on Scroll
+// Change Navigation Bar on Scrol
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
@@ -57,3 +57,79 @@ navLinks.forEach(link => {
     link.addEventListener("click", handleNavLinkClick);
 });
 
+const texts = [
+    "an ENGINEER.",
+    "a CODER.",
+    "a PROGRAMMER.",
+    "a DEVELOPER.",
+    "a DESIGNER.",
+    "a YOUTUBER."
+    //"ARCHITECT",
+    //"FULL-STACK DEVELOPER",
+    //"UI/UX",
+
+    
+]
+
+let speed  = 100;
+const textElements = document.querySelector(".typewriter-text");
+
+let textIndex = 0;
+let charcterIndex = 0;
+
+function typeWriter(){
+    if (charcterIndex < texts[textIndex].length){
+        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+        charcterIndex++;
+        setTimeout(typeWriter, speed); 
+    }
+    else{
+        setTimeout(eraseText, 1000)
+    }
+}
+
+function eraseText(){
+    if(textElements.innerHTML.length > 0){
+        textElements.innerHTML = textElements.innerHTML.slice(0,-1);
+        setTimeout(eraseText, 50)
+    }
+    else{
+        textIndex = (textIndex + 1) % texts.length;
+        charcterIndex = 0;
+        setTimeout(typeWriter, 500)
+    }
+}
+
+window.onload = typeWriter
+
+// JavaScript to Change Background Color
+const bgChangeIcon = document.getElementById('bg-change-icon');
+
+// Array of colors to cycle through
+const colors = [
+    { color: '#d1c4e9', name: 'Lavender' },        // Lavender
+    { color: '#b3e5fc', name: 'Sky Blue' },        // Sky Blue
+    { color: '#c8e6c9', name: 'Pale Green' },      // Pale Green
+    { color: '#ffccbc', name: 'Peach' },           // Peach
+    { color: '#ffebee', name: 'Light Red' },       // Light Red
+    { color: '#e3f2fd', name: 'Light Blue' },      // Light Blue
+    { color: '#f1f8e9', name: 'Light Lime' },      // Light Lime
+    { color: '#fff9c4', name: 'Light Yellow' },    // Light Yellow
+    { color: '#e8f5e9', name: 'Mint Green' },      // Mint Green
+    { color: '#fce4ec', name: 'Baby Pink' },       // Baby Pink
+    { color: '#e1bee7', name: 'Orchid' },           // Orchid
+    { color: '#ffe6f2', name: 'Light Pink' },      // Light Pink
+    
+];
+let currentColorIndex = 0;
+
+bgChangeIcon.addEventListener('click', function () {
+    // Change the background color
+    document.body.style.backgroundColor = colors[currentColorIndex].color;
+
+    // Optionally, you can log the color name to the console
+    console.log(`Background color changed to: ${colors[currentColorIndex].name}`);
+
+    // Cycle through colors
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+});
