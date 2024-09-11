@@ -21,6 +21,36 @@ body {
     padding-right: 30px;
 }
 
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color: #ff007b;
+    text-shadow: 0  0 10px #ffffff;
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #ff007b;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.typewriter,
+.typewriter-text,
+.typewriter label {
+    color: #ff007b;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
 /* Navigation */
 nav {
     /* Position navigation bar fixed to the left */
@@ -99,7 +129,7 @@ header h1:hover {
     /* Change text color to pink on hover */
     color: #ff0066;
     /* Add text shadow on hover */
-    text-shadow: 2px 2px 8px rgba(255, 51, 133, 0.5);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
     /* Add transition effect to text color and shadow */
     transition: color 0.3s ease, text-shadow 0.3s ease;
     /* Add animation effect to header text color and shadow */
@@ -151,7 +181,7 @@ section h2 {
 
 section h2:hover {
     color: #ff3385;
-    text-shadow: 2px 2px 8px rgba(255, 51, 133, 0.5);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
 }
 
 
@@ -177,8 +207,42 @@ section ul li {
 section ul li:hover {
     background-color: #ffe6f2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
+    transform: translateX(-5px);
 }
+
+/* Interests Section  */
+#interests {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px; /* Adjust this value to control the minimum width of each column */
+    margin: 10px;
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column li {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.column i {
+    margin-right: 10px;
+}
+
 
 #blog{
     text-align: justify;
@@ -248,6 +312,7 @@ html {
     }
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -263,4 +328,27 @@ html {
         width: 150px;
         height: 150px;
     }
+}
+
+/* Background Change Icon Styling */
+#bg-change-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ff0066;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#bg-change-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+#bg-change-icon:hover {
+    background-color: #ff3385;
+    transform: scale(1.1);
 }
