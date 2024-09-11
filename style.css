@@ -41,7 +41,7 @@ body {
 }
 
 .content p{
-    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    font-size: large;
     margin: 10px 0;
 }
 .typewriter,
@@ -243,16 +243,25 @@ section ul li:hover {
     margin-right: 10px;
 }
 
-
-#blog{
-    text-align: justify;
-}
-
+/* Coloums Padding */
 #about{
     text-align: center;
 }
 
-#contact {
+#blog {
+    text-align: justify;
+}
+#interests {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#skills {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#contact{
     text-align: center;
 }
 /* Smooth Scrolling */
@@ -333,8 +342,8 @@ html {
 /* Background Change Icon Styling */
 #bg-change-icon {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 60px;
+    left: 40px;
     background-color: #ff0066;
     padding: 15px;
     border-radius: 50%;
