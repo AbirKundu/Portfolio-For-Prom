@@ -342,8 +342,8 @@ html {
 /* Background Change Icon Styling */
 #bg-change-icon {
     position: fixed;
-    top: 60px;
-    left: 40px;
+    top: 15px;
+    left: 50px;
     background-color: #ff0066;
     padding: 15px;
     border-radius: 50%;
